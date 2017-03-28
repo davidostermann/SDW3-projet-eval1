@@ -47,3 +47,5 @@ Le format de donnée des couleurs pourrait être le suivant :
 L'application finale pourrait ressembler à l'image suivante :
 
 ![exemple.png](exemple.png)
+
+1rst commit Kieran
