@@ -35,6 +35,7 @@ class App extends Component {
           <img src={logo} className="App-logo" alt="logo" />
           <h2>Welcome to React</h2>
         </div>
+        Quand je clique sur un element de la liste ci-dessous, je change la couleur de fond du header
         <ColorsComponent colors={this.state.colors} changeColor={this.changeColor.bind(this)}/>
       </div>
     );
