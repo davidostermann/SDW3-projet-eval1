@@ -8,17 +8,33 @@
 }
 
 .App-header {
-  background-color: #222;
   height: 150px;
   padding: 20px;
   color: white;
-}
-
-.App-intro {
-  font-size: large;
+  -webkit-transition: background-color 500ms linear;
+  -ms-transition: background-color 500ms linear;
+  transition: background-color 500ms linear;
 }
 
 @keyframes App-logo-spin {
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
+}
+
+.ColorPicker-Ul {
+  list-style: none;
+  color: white;
+  padding: 0;
+}
+
+.ColorPicker-Color {
+  margin: 0 auto;  
+  text-transform: uppercase;
+  width: 50%;
+  height: auto;
+  padding: 13px;
+  line-height: 30px;
+  font-size: 30px; 
+  border-radius: 10px;
+  margin-top: 10px; 
 }
