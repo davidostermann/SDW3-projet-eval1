@@ -1,4 +1,4 @@
-# SWD3-projet-eval1
+# SDW3-projet-eval1
 Projet d'evaluation à mi-parcours
 
 ## Attendus :
@@ -16,6 +16,8 @@ L'application permettra d'ajouter des elements à la liste via un formulaire com
 * un pour la couleur.
 
 Le format de donnée des couleurs :
+
+```
 {
   "colors": [
     {"id":0, "name": "rouge", "color": "#FF0000"},
@@ -24,3 +26,8 @@ Le format de donnée des couleurs :
     {"id":0, "name": "noir", "color": "black"}
   ]
 }
+```
+
+Un exemple :
+
+![exemple.png](exemple.png)
