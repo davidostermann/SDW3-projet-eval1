@@ -1,8 +1,10 @@
 {
+    "parser": "babel-eslint",
     "env": {
         "browser": true,
         "es6": true,
-        "node": true
+        "node": true,
+        "mocha": true
     },
     "extends": "eslint:recommended",
     "parserOptions": {
@@ -47,6 +49,9 @@
         "spaced-comment": [
             "error",
             "always"
-        ]
+        ],
+        "react/jsx-uses-vars": 2,
+        "react/jsx-uses-react": 2,
+        "react/react-in-jsx-scope": 2
     }
 }
