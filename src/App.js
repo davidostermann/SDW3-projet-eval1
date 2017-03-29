@@ -3,6 +3,7 @@ import logo from './logo.svg';
 import './App.css';
 import { colors } from './data/colors.json';
 import ColorPicker from './ColorPicker';
+import ColorAdder from './ColorAdder';
 
 class App extends Component {
   constructor(props) {
@@ -14,9 +15,16 @@ class App extends Component {
     };
   }
 
-  pickColor(color) {
+  pickColor = (color) => {
     this.setState({
       selectedColor: color
+    });
+  }
+
+  addColor = ({name, hex: color}) => {
+    const newColors = [...this.state.colors, {id: this.state.colors.length, name, color}];
+    this.setState({
+      colors: newColors
     });
   }
 
@@ -33,7 +41,8 @@ class App extends Component {
           <img src={logo} className='App-logo' alt='logo' />
           <h2>Welcome to ColorPicker</h2>
         </div>
-        <ColorPicker colors={this.state.colors} pick={this.pickColor.bind(this)}/>
+        <ColorPicker colors={this.state.colors} pick={this.pickColor}/>
+        <ColorAdder addColor={this.addColor}/>
       </div>
     );
   }

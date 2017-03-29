@@ -1,5 +1,8 @@
+@import url('https://fonts.googleapis.com/css?family=Lato');
+
 .App {
   text-align: center;
+  font-family: 'Lato', sans-serif;
 }
 
 .App-logo {
@@ -28,6 +31,7 @@
 }
 
 .ColorPicker-Color {
+  cursor: pointer;
   margin: 0 auto;  
   text-transform: uppercase;
   width: 50%;
