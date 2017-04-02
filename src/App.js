@@ -9,7 +9,7 @@ class App extends Component {
   constructor(props) {
     super(props);
 
-    this.state = {
+    this.state = (localStorage.state) ? JSON.parse(localStorage.state) : {
       selectedColor: '#000',
       colors: colors
     };
@@ -19,6 +19,10 @@ class App extends Component {
     this.setState({
       selectedColor: color
     });
+  }
+
+  componentDidUpdate = () => {
+    localStorage.state = JSON.stringify(this.state);
   }
 
   addColor = ({name, hex: color}) => {
