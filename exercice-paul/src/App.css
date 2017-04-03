@@ -28,22 +28,32 @@
   margin: auto;
 }
 .colors div {
-  margin: 20px;
+  margin: auto;
+  margin-bottom: 15px;
   height: 50px;
   width: 200px;
   line-height: 50px;
   color: white;
+  border-radius: 1em;
 }
 
 .vermillion {
   color: red;
 }
 .violet {
-  background-color: blue;
+  background-color: violet;
 }
 .pale_green {
-  color: palegreen;
+    background-color: palegreen;
 }
 .marin_blue {
-  color: 
+    background-color: aquamarine;
+}
+.addColors {
+    margin: 15px;
+}
+.input {
+    display: block;
+    margin: auto;
+    margin-bottom: 15px;
 }

@@ -1,0 +1,24 @@
+{
+  "colors": [
+    {
+      "id"  : 1,
+      "name": "violet",
+      "code": "violet"
+    },
+    {
+      "id"    : 2,
+      "name"  : "Marin Blue",
+      "code"  : "aquamarine"
+    },
+    {
+      "id"    : 3,
+      "name"  : "Pale Green",
+      "code"  : "palegreen"
+    },
+    {
+      "id"    : 4,
+      "name"  : "Vermillon",
+      "code"  : "red"
+    }
+  ]
+}
