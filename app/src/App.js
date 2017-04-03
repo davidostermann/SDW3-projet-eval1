@@ -17,12 +17,31 @@ class App extends Component {
             selectedColor: '#FF0000'
         };
     }
+
+    /**
+     * Selectionne une couleur
+     * @param color
+     */
     selectColor(color) {
         this.setState({
             selectedColor: color.color
         })
     }
 
+    /**
+     * Ajoute une couleur
+     * @param color
+     */
+    addColor(color) {
+        var colors = this.state.colors;
+        colors.push(color);
+        this.setState({colors: colors});
+    }
+
+    /**
+     * Affiche le contenu de la page
+     * @returns {HTML}
+     */
     render() {
         const style = {
             background: this.state.selectedColor
@@ -36,7 +55,7 @@ class App extends Component {
                 <div>
                     <ColorList colors={this.state.colors} selectColor={this.selectColor.bind(this)}></ColorList>
                 </div>
-                <ColorAdd/>
+                <ColorAdd addColor={this.addColor.bind(this)}></ColorAdd>
             </div>
         );
     }
