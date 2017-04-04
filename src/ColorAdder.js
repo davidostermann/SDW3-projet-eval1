@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { SliderPicker } from 'react-color';
 import './App.css';
 
 class ColorAdder extends Component {
@@ -14,7 +15,7 @@ class ColorAdder extends Component {
   }
 
   handleHexChange = (e) => {
-    this.setState({hex: e.target.value});
+    this.setState({hex: e.hex});
   }
 
   nameValidator = (name) => {
@@ -59,16 +60,10 @@ class ColorAdder extends Component {
             className={this.state.errorOnName ? 'Input-Error' : ''}
           />
         </div>
-        <div className='Form-Input'>
-          <label htmlFor='hex' >Color (hex)</label>
-          <input
-            id='hex'
-            type='text'
-            value={this.state.hex.toUpperCase()}
-            onChange={this.handleHexChange}
-            className={this.state.errorOnHex ? 'Input-Error' : ''}
-          />
-        </div>
+        <SliderPicker
+          color={this.state.hex}
+          onChangeComplete={this.handleHexChange}
+        />        
         <input className='Form-Add' type='submit' value='Add' />
       </form>
     );

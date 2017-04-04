@@ -1,7 +1,7 @@
 import React from 'react';
 import './App.css';
 
-const ColorPicker = ({colors, pick}) => {
+const ColorPicker = ({colors, pick, del}) => {
 
   const Colors = colors.map((color) => {
     const style = {
@@ -12,8 +12,13 @@ const ColorPicker = ({colors, pick}) => {
       <li
         key={color.id}
         style={style}
-        onClick={pick.bind(this, color.color)}
+        onClick={() => pick(color.color)}
         className='ColorPicker-Color'
+        onContextMenu={(e) => {
+            e.preventDefault();
+            del(color.id)
+          }
+        }
       >
         {color.name}
       </li>
@@ -31,7 +36,8 @@ const ColorPicker = ({colors, pick}) => {
 
 ColorPicker.propTypes = {
   colors: React.PropTypes.array.isRequired,
-  pick: React.PropTypes.func.isRequired
+  pick: React.PropTypes.func.isRequired,
+  del: React.PropTypes.func.isRequired
 };
 
 export default ColorPicker;

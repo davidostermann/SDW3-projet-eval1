@@ -21,12 +21,28 @@ class App extends Component {
     });
   }
 
+  delColor = (id) => {
+    let colors = this.state.colors.filter((color) => {
+      return (color.id !== id);
+    });
+
+    this.setState({colors});
+  }
+
   componentDidUpdate = () => {
     localStorage.state = JSON.stringify(this.state);
   }
 
+  getNewId = (colors) => {
+    if (colors.length === 0) {
+      return 0;
+    } else {
+      return colors[colors.length - 1].id + 1;
+    }
+  }
+
   addColor = ({name, hex: color}) => {
-    const newColors = [...this.state.colors, {id: this.state.colors.length, name, color}];
+    const newColors = [...this.state.colors, {id: this.getNewId(this.state.colors), name, color}];
     this.setState({
       colors: newColors
     });
@@ -45,7 +61,7 @@ class App extends Component {
           <img src={logo} className='App-logo' alt='logo' />
           <h2>Welcome to ColorPicker</h2>
         </div>
-        <ColorPicker colors={this.state.colors} pick={this.pickColor}/>
+        <ColorPicker colors={this.state.colors} pick={this.pickColor} del={this.delColor}/>
         <ColorAdder addColor={this.addColor}/>
       </div>
     );
