@@ -26,11 +26,9 @@ const ColorPicker = ({colors, pick, del}) => {
   });
 
   return (
-    <div>
-      <ul className='ColorPicker-Ul'>
-        {Colors}
-      </ul>
-    </div>
+    <ul className='ColorPicker-Ul'>
+      {Colors}
+    </ul>
   );
 };
 

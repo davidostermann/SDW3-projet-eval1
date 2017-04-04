@@ -1,18 +1,23 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
 import { colors } from './data/colors.json';
 import ColorPicker from './ColorPicker';
 import ColorAdder from './ColorAdder';
+import Header from './Header';
+import Loading from './Loading';
 
 class App extends Component {
   constructor(props) {
     super(props);
 
-    this.state = (localStorage.state) ? JSON.parse(localStorage.state) : {
-      selectedColor: '#000',
-      colors: colors
-    };
+    this.state = {};
+    setTimeout(() => {
+      const state = (localStorage.state) ? JSON.parse(localStorage.state) : {
+        selectedColor: '#000',
+        colors: colors
+      };
+      this.setState(state);
+    }, 2000);
   }
 
   pickColor = (color) => {
@@ -49,22 +54,19 @@ class App extends Component {
   }
 
   render() {
-    const style = {
-      header: {
-        backgroundColor: this.state.selectedColor
-      }
-    };
-
-    return (
-      <div className='App'>
-        <div className='App-header' style={style.header}>
-          <img src={logo} className='App-logo' alt='logo' />
-          <h2>Welcome to ColorPicker</h2>
+    if (this.state.colors) {
+      return (
+        <div className='App'>
+          <Header selectedColor={this.state.selectedColor}/>
+          <ColorPicker colors={this.state.colors} pick={this.pickColor} del={this.delColor}/>
+          <ColorAdder addColor={this.addColor}/>
         </div>
-        <ColorPicker colors={this.state.colors} pick={this.pickColor} del={this.delColor}/>
-        <ColorAdder addColor={this.addColor}/>
-      </div>
-    );
+      );
+    } else {
+      return (
+        <Loading />
+      );
+    }
   }
 }
 
