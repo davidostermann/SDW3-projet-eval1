@@ -10,8 +10,8 @@ export default class App extends Component {
   addColor() {
     const id = this.state.colors.length;
     const name = this.state.newColorName;
-    const hex = this.state.newColorHex;
-    this.setState({ colors: [ ...this.state.colors, { id, name, hex }], newColorName: '', newColorHex: '' });
+    const color = this.state.newColorHex;
+    this.setState({ colors: [ ...this.state.colors, { id, name, color }], newColorName: '', newColorHex: '' });
   }
 
   render() {
