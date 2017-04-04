@@ -3,3 +3,71 @@ body {
   padding: 0;
   font-family: sans-serif;
 }
+
+.list-group{
+  margin-top: 40px;
+}
+
+.list-group-item{
+  border: none;
+  border-radius: 2px;
+  padding: 10px;
+  min-width: 250px;
+  display: block;
+  margin: 15px auto;
+  font-size: 0.9rem;
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: 600;
+  font-family: Roboto;
+  outline: none;
+  cursor: pointer;
+  box-shadow: 0px 0px 1px 1px rgba(0, 0, 0, 0.1);
+}
+
+
+.form{
+  background-color: #dadada;
+  display: inline-block;
+  padding: 25px 50px;
+  border-radius: 2px;
+  font-family: Roboto;
+  margin-top: 25px;
+}
+
+h3{
+  margin: 0;
+  margin-bottom: 25px;
+  font-size: 1.5rem;
+  color: #444444;
+}
+
+.field{
+  display: block;
+  margin: 5px;
+  font-size: 0.9rem;
+}
+
+label{
+  width: 150px;
+  display: inline-block;
+}
+
+input{
+  border:none;
+  border-radius: 2px;
+}
+
+.form button{
+  margin-top: 25px;
+  padding: 5px 25px;
+  border-radius: 2px;
+  border: none;
+  background-color: #444444;
+  color: #fff;
+  font-weight: 500;
+  font-family: Roboto;
+  outline: none;
+  cursor: pointer;
+  box-shadow: 0px 0px 1px 1px rgba(0, 0, 0, 0.1);
+}
