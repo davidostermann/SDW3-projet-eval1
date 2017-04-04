@@ -1,0 +1,8 @@
+{
+  "colors": [
+    {"id":0, "name": "green", "color": "#4CAF50"},
+    {"id":1, "name": "indigo", "color": "#3F51B5"},
+    {"id":2, "name": "amber", "color": "#FFC107"},
+    {"id":3, "name": "black", "color": "#000"}
+  ]
+}
